@@ -17,8 +17,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://discovery-server:8761/eureka
-
-management:
-  zipkin:
-    tracing:
-      endpoint: http://zipkin-server:9411/api/v2/spans
