@@ -27,6 +27,18 @@ spring:
 
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: '*'
+            allowed-headers: '*'
+            allowed-methods:
+              - OPTIONS
+              - POST
+              - PUT
+              - GET
+              - DELETE
+
       discovery:
         locator:
           enabled: true
