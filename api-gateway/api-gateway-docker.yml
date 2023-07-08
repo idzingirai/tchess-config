@@ -16,3 +16,14 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin-server:9411/api/v2/spans
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: player
+        url: /v3/api-docs/player
+      - name: tournament
+        url: /v3/api-docs/tournament
+      - name: venue
+        url: /v3/api-docs/venue
+        
