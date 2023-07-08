@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+  level:
+    io:
+      micrometer: DEBUG
+    org:
+      springframework.aop: DEBUG
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+        - id: player-service-route
+          uri: lb://player-service
+          predicates:
+            - Path=/api/v1/players/**
+
+        - id: venue-service-route
+          uri: lb://venue-service
+          predicates:
+            - Path=/api/v1/venues/**
+
+        - id: tournament-service-route
+          uri: lb://tournament-service
+          predicates:
+            - Path=/api/v1/tournaments/**
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
