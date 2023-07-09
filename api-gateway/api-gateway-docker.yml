@@ -4,6 +4,31 @@ spring:
       client:
         url: http://admin-server:9090
 
+  cloud:
+    gateway:
+      routes:
+        - id: player-service-route
+          uri: lb://player-service
+          predicates:
+            - Path=/api/v1/players/**
+
+        - id: venue-service-route
+          uri: lb://venue-service
+          predicates:
+            - Path=/api/v1/venues/**
+
+        - id: tournament-service-route
+          uri: lb://tournament-service
+          predicates:
+            - Path=/api/v1/tournaments/**
+
+        - id: openapi-swagger
+          uri: http://api-gateway:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/openapi.yml
+
 eureka:
   instance:
     hostname: discovery-server
@@ -16,4 +41,3 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin-server:9411/api/v2/spans
-        
