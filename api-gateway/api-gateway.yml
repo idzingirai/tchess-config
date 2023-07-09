@@ -65,7 +65,7 @@ spring:
           predicates:
             - Path=/v3/api-docs/**
           filters:
-            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/player-api.yml
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/openapi.yml
 
 springdoc:
   swagger-ui:
