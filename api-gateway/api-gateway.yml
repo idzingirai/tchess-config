@@ -72,6 +72,10 @@ springdoc:
     urls:
       - name: player
         url: /v3/api-docs/player-service
+      - name: tournament
+        url: /v3/api-docs/tournament-service
+      - name: venue
+        url: /v3/api-docs/venue-service
 
 eureka:
   instance:
