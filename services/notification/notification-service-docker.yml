@@ -12,13 +12,14 @@ management:
       endpoint: http://zipkin-server:9411/api/v2/spans
 
 spring:
-  consumer:
-    bootstrap-servers: broker:9092
-    group-id: "notificationId"
-    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-    properties:
-      spring:
-        json:
-          type:
-            mapping: event:za.co.dvt.isheanesu.notification.model.PlayerCreatedEvent
+  kafka:
+    consumer:
+      bootstrap-servers: broker:9092
+      group-id: "notificationId"
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            type:
+              mapping: event:za.co.dvt.isheanesu.notification.model.PlayerCreatedEvent

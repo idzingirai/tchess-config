@@ -25,16 +25,17 @@ spring:
       client:
         url: http://localhost:9090
 
-  consumer:
-    bootstrap-servers: localhost:9092
-    group-id: "notificationId"
-    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-    properties:
-      spring:
-        json:
-          type:
-            mapping: event:za.co.dvt.isheanesu.notification.model.PlayerCreatedEvent
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: "notificationId"
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            type:
+              mapping: event:za.co.dvt.isheanesu.notification.model.PlayerCreatedEvent
 
 eureka:
   instance:
