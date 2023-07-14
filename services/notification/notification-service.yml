@@ -1,0 +1,44 @@
+server:
+  port: 0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+  level:
+    io:
+      micrometer: DEBUG
+    org:
+      springframework.aop: DEBUG
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+
+  consumer:
+    bootstrap-servers: localhost:9092
+    group-id: "notificationId"
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    properties:
+      spring:
+        json:
+          type:
+            mapping: event:za.co.dvt.isheanesu.notification.model.PlayerCreatedEvent
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

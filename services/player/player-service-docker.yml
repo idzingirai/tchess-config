@@ -4,6 +4,10 @@ spring:
       client:
         url: http://admin-server:9090
 
+  kafka:
+    producer:
+      bootstrap-servers: broker:9092
+
   datasource:
     url: jdbc:postgresql://postgres-db:5432/tchess
     username: postgres
