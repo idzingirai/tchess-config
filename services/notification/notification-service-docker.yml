@@ -12,9 +12,14 @@ management:
       endpoint: http://zipkin-server:9411/api/v2/spans
 
 spring:
+  boot:
+    admin:
+      client:
+        url: http://admin-server:9090
+
   kafka:
     consumer:
-      bootstrap-servers: broker:9092
+      bootstrap-servers: broker:29092
       group-id: "notificationId"
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
