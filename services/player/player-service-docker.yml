@@ -2,7 +2,7 @@ spring:
   boot:
     admin:
       client:
-        url: http://admin-server
+        url: http://admin-server:9090
 
   kafka:
     producer:
@@ -20,7 +20,7 @@ eureka:
     preferIpAddress: true
   client:
     service-url:
-      defaultZone: http://discovery-server/eureka
+      defaultZone: http://discovery-server:8761/eureka
 
 management:
   zipkin:
