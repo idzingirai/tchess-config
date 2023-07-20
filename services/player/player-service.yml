@@ -38,7 +38,7 @@ spring:
               mapping: event:za.co.dvt.isheanesu.player.event.PlayerCreatedEvent
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/tchess
+    url: jdbc:postgresql://postgres-db/tchess
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver

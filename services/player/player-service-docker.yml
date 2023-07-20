@@ -8,12 +8,6 @@ spring:
     producer:
       bootstrap-servers: broker:29092
 
-  datasource:
-    url: jdbc:postgresql://postgres-db/tchess
-    username: postgres
-    password: password
-    driver-class-name: org.postgresql.Driver
-
 eureka:
   instance:
     hostname: discovery-server
