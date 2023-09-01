@@ -35,7 +35,7 @@ spring:
     show-sql: true
     defer-datasource-initialization: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-only
 
   sql:
     init:
