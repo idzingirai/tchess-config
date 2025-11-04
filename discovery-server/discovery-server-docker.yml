@@ -1,5 +1,5 @@
 spring:
-    boot:
+  boot:
     admin:
       client:
         url: http://admin-server:9090

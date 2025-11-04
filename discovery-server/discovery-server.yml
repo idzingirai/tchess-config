@@ -2,7 +2,7 @@ server:
   port: 8761
 
 spring:
-    boot:
+  boot:
     admin:
       client:
         url: http://localhost:9090
