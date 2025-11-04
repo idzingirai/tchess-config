@@ -3,6 +3,9 @@ spring:
     admin:
       client:
         url: http://admin-server:9090
+  docker:
+    compose:
+      file: ./docker/compose.yml
 
   cloud:
     gateway:
