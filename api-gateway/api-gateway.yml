@@ -26,6 +26,10 @@ spring:
       client:
         url: http://localhost:9090
 
+  docker:
+    compose:
+      file: ./docker/compose.yml
+
   cloud:
     gateway:
       globalcors:
