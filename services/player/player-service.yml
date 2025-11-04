@@ -47,10 +47,10 @@ spring:
         spring:
           json:
             type:
-              mapping: event:za.co.dvt.isheanesu.player.event.PlayerCreatedEvent
+              mapping: event:za.co.ishe.player.event.PlayerCreatedEvent
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/tchess
+    url: jdbc:postgresql://localhost:54320/player
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
