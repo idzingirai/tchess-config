@@ -25,6 +25,18 @@ spring:
       client:
         url: http://localhost:9090
 
+  cache:
+    type: redis
+
+  data:
+    redis:
+      host: localhost
+      port: 63790
+
+  docker:
+    compose:
+      file: ./docker/compose.yml
+
   kafka:
     producer:
       client-id: player-producer
