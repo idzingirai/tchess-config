@@ -31,7 +31,7 @@ spring:
   data:
     redis:
       host: localhost
-      port: 63791
+      port: 6379
 
   datasource:
     url: jdbc:postgresql://localhost:54321/venue
