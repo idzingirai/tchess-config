@@ -26,7 +26,7 @@ spring:
         url: http://localhost:9090
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/tchess
+    url: jdbc:postgresql://localhost:54322/tournament
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
