@@ -39,7 +39,7 @@ spring:
         spring:
           json:
             type:
-              mapping: event:za.co.ishe.notification.model.PlayerCreatedEvent
+              mapping: event:za.co.ishe.tchess.notification.model.PlayerCreatedEvent
 
 eureka:
   instance:

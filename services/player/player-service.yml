@@ -53,7 +53,7 @@ spring:
         spring:
           json:
             type:
-              mapping: event:za.co.ishe.player.event.PlayerCreatedEvent
+              mapping: event:za.co.ishe.tchess.player.event.PlayerCreatedEvent
 
   
 
