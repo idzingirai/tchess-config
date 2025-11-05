@@ -33,6 +33,12 @@ spring:
       host: localhost
       port: 6379
 
+  datasource:
+    url: jdbc:postgresql://localhost:54320/player
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
   docker:
     compose:
       file: ./docker/compose.yml
@@ -49,11 +55,7 @@ spring:
             type:
               mapping: event:za.co.ishe.player.event.PlayerCreatedEvent
 
-  datasource:
-    url: jdbc:postgresql://localhost:54320/player
-    username: postgres
-    password: password
-    driver-class-name: org.postgresql.Driver
+  
 
   jpa:
     show-sql: true
