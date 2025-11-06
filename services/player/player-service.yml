@@ -14,11 +14,9 @@ logging:
   pattern:
     level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
   level:
-    root: INFO
-    io:
-      micrometer: DEBUG
-    org:
-      springframework.aop: DEBUG
+    root: DEBUG
+    io.micrometer: DEBUG
+    org.springframework.aop: DEBUG
 
 spring:
   boot:
