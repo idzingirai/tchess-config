@@ -5,10 +5,14 @@ spring:
         url: http://admin-server:9090
 
   datasource:
-    url: jdbc:postgresql://postgres-db:5432/tchess
+    url: jdbc:postgresql://tournament-postgres-db:54322/tournament
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
+
+  docker:
+    compose:
+      enabled: false
 
 eureka:
   instance:

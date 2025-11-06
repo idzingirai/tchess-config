@@ -8,8 +8,13 @@ spring:
     producer:
       bootstrap-servers: broker:29092
 
+  data:
+    redis:
+      host: player-redis
+      port: 6370
+
   datasource:
-    url: jdbc:postgresql://postgres-db:5432/tchess
+    url: jdbc:postgresql://player-postgres-db:54320/player
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver

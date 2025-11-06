@@ -55,8 +55,6 @@ spring:
             type:
               mapping: event:za.co.ishe.tchess.player.event.PlayerCreatedEvent
 
-  
-
   jpa:
     show-sql: true
     defer-datasource-initialization: true

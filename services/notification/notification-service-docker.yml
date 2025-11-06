@@ -17,6 +17,10 @@ spring:
       client:
         url: http://admin-server:9090
 
+  docker:
+    compose:
+    enabled: false
+  
   kafka:
     consumer:
       bootstrap-servers: broker:29092
@@ -27,4 +31,4 @@ spring:
         spring:
           json:
             type:
-              mapping: event:za.co.dvt.isheanesu.notification.model.PlayerCreatedEvent
+              mapping: event:za.co.ishe.tchess.notification.model.PlayerCreatedEvent

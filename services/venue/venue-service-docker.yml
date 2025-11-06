@@ -4,11 +4,23 @@ spring:
       client:
         url: http://admin-server:9090
 
+  cache:
+    type: redis
+
+  data:
+    redis:
+      host: venue-redis
+      port: 6371
+
   datasource:
-    url: jdbc:postgresql://postgres-db:5432/tchess
+    url: jdbc:postgresql://venue-postgres-db:54321/venue
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
+
+  docker:
+    compose:
+      enabled: false
 
 eureka:
   instance:
