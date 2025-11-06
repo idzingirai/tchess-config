@@ -32,7 +32,7 @@ logging:
     level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
   level:
     root: INFO
-    za.co.ishe.tchess: INFO
+    za.co.ishe.tchess: DEBUG
     io.micrometer: DEBUG
     org.springframework.aop: DEBUG
   console:
