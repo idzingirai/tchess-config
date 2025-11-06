@@ -27,6 +27,14 @@ eureka:
     service-url:
       defaultZone: http://discovery-server:8761/eureka
 
+logging:
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+  level:
+    za.co.ishe.tchess: DEBUG
+    io.micrometer: DEBUG
+    org.springframework.aop: DEBUG
+
 management:
   zipkin:
     tracing:
