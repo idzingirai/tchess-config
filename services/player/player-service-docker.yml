@@ -14,7 +14,7 @@ spring:
       port: 6370
 
   datasource:
-    url: jdbc:postgresql://player-postgres-db:54320/player
+    url: jdbc:postgresql://player-postgres-db:5432/player
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
