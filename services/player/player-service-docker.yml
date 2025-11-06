@@ -31,9 +31,12 @@ logging:
   pattern:
     level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
   level:
+    root: INFO
     za.co.ishe.tchess: INFO
     io.micrometer: DEBUG
     org.springframework.aop: DEBUG
+  console:
+    enabled: true
 
 management:
   zipkin:
