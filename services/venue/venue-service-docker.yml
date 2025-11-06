@@ -10,10 +10,10 @@ spring:
   data:
     redis:
       host: venue-redis
-      port: 6371
+      port: 6379
 
   datasource:
-    url: jdbc:postgresql://venue-postgres-db:54321/venue
+    url: jdbc:postgresql://venue-postgres-db:5432/venue
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver

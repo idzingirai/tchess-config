@@ -5,7 +5,7 @@ spring:
         url: http://admin-server:9090
 
   datasource:
-    url: jdbc:postgresql://tournament-postgres-db:54322/tournament
+    url: jdbc:postgresql://tournament-postgres-db:5432/tournament
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
